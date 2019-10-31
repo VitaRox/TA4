@@ -19,7 +19,28 @@ public class VitaWiebeTA4 {
          Create parallel arrays, one to hold names and one to hold grades;
          These shall lie at corresponding indices;
         */
-        int [] nameArray = new int[students];
-        int [] gradeArray = new int[students];
+        String [] nameArray = new String[(int)students];
+        double [] gradeArray = new double[students];
+
+        // For each student, get their name and grade;
+        for(int i = 0; i < gradeArray.length; i++){
+
+            // Get student name and add to name array;
+            System.out.println("Please enter a student name: ");
+            String currName = scan.next();
+            nameArray[i] = currName;
+
+            // Get student grade and add to grade array;
+            System.out.println("Please enter their grade: ");
+            double currGrade = scan.nextDouble();
+            gradeArray[i] = currGrade;
+        }
+
+        System.out.println("You entered the following: ");
+        for(int j = 0; j < nameArray.length; j++){
+            System.out.println("Name: " + nameArray[j] + "Grade: " + gradeArray[j]);
+        }
+
+        System.out.println("Thanks for using my program and have a great day!");
     }
 }
